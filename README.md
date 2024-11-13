@@ -6,7 +6,7 @@
 
  
  
-## Lab 2 - Control Systems
+## Lab 2 - Control Systems | Arduino IDE
 
 ### Wiring
 
@@ -15,7 +15,7 @@
 
 ---
 
-### Stop within 5 cm ()
+### Stop within 5 cm
 
 
 https://github.com/user-attachments/assets/f37c4adf-fd69-48de-b847-d7478e3d45b6
@@ -26,3 +26,14 @@ https://github.com/user-attachments/assets/f37c4adf-fd69-48de-b847-d7478e3d45b6
 
 <img src="https://github.com/user-attachments/assets/61a4640a-b954-45ef-ad30-1966b7952df0" width="200">
 <img src="https://github.com/user-attachments/assets/807588b4-6ac2-4d2d-9026-b42f9cb92835" width="200">
+
+---
+
+### Follow Track [followTrack.cpp]
+
+
+https://github.com/user-attachments/assets/36cc139b-9cc3-49a4-b727-f3c53cbc34cd
+
+<img src="https://github.com/user-attachments/assets/6a796747-c951-477c-b00e-d6cd4c4465b3" width="200">
+<img src="https://github.com/user-attachments/assets/41356ede-e1b4-402f-991b-5575e3836bf7" width="200">
+
