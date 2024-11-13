@@ -21,5 +21,5 @@ https://github.com/user-attachments/assets/f37c4adf-fd69-48de-b847-d7478e3d45b6
 
 ### Lights if intensity below 500
 
-![IMG_4987 2](https://github.com/user-attachments/assets/61a4640a-b954-45ef-ad30-1966b7952df0)
-![IMG_4988 2](https://github.com/user-attachments/assets/807588b4-6ac2-4d2d-9026-b42f9cb92835)
+<img src="https://github.com/user-attachments/assets/61a4640a-b954-45ef-ad30-1966b7952df0" width="200">
+<img src="https://github.com/user-attachments/assets/807588b4-6ac2-4d2d-9026-b42f9cb92835" width="200">
