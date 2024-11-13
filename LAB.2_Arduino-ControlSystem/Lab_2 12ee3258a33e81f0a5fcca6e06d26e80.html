@@ -1,0 +1,1133 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>Lab_2</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	padding-inline-start: 0;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.page-description {
+    margin-bottom: 2em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(55, 53, 47, 1);
+}
+.highlight-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.highlight-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.highlight-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.highlight-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.highlight-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.highlight-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.highlight-default_background {
+	color: rgba(55, 53, 47, 1);
+}
+.highlight-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.highlight-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.highlight-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.highlight-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.highlight-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.highlight-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.highlight-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.highlight-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.highlight-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.block-color-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.block-color-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.block-color-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.block-color-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.block-color-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.block-color-default_background {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.block-color-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.block-color-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.block-color-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.block-color-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.block-color-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.block-color-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.select-value-color-uiBlue { background-color: rgba(35, 131, 226, .07); }
+.select-value-color-pink { background-color: rgba(245, 224, 233, 1); }
+.select-value-color-purple { background-color: rgba(232, 222, 238, 1); }
+.select-value-color-green { background-color: rgba(219, 237, 219, 1); }
+.select-value-color-gray { background-color: rgba(227, 226, 224, 1); }
+.select-value-color-transparentGray { background-color: rgba(227, 226, 224, 0); }
+.select-value-color-translucentGray { background-color: rgba(0, 0, 0, 0.06); }
+.select-value-color-orange { background-color: rgba(250, 222, 201, 1); }
+.select-value-color-brown { background-color: rgba(238, 224, 218, 1); }
+.select-value-color-red { background-color: rgba(255, 226, 221, 1); }
+.select-value-color-yellow { background-color: rgba(253, 236, 200, 1); }
+.select-value-color-blue { background-color: rgba(211, 229, 239, 1); }
+.select-value-color-pageGlass { background-color: undefined; }
+.select-value-color-washGlass { background-color: undefined; }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="12ee3258-a33e-81f0-a5fc-ca6e06d26e80" class="page sans"><header><div class="page-header-icon undefined"><span class="icon">🥼</span></div><h1 class="page-title">Lab_2</h1><p class="page-description"></p><table class="properties"><tbody><tr class="property-row property-row-text"><th><span class="icon property-icon"><svg role="graphics-symbol" viewBox="0 0 16 16" style="width:14px;height:14px;display:block;fill:rgba(55, 53, 47, 0.45);flex-shrink:0" class="typesText"><path d="M1.56738 3.25879H14.4258C14.7676 3.25879 15.0479 2.97852 15.0479 2.63672C15.0479 2.29492 14.7744 2.02148 14.4258 2.02148H1.56738C1.21875 2.02148 0.952148 2.29492 0.952148 2.63672C0.952148 2.97852 1.22559 3.25879 1.56738 3.25879ZM1.56738 6.84082H14.4258C14.7676 6.84082 15.0479 6.56055 15.0479 6.21875C15.0479 5.87695 14.7744 5.60352 14.4258 5.60352H1.56738C1.21875 5.60352 0.952148 5.87695 0.952148 6.21875C0.952148 6.56055 1.22559 6.84082 1.56738 6.84082ZM1.56738 10.4229H14.4258C14.7676 10.4229 15.0479 10.1426 15.0479 9.80078C15.0479 9.45898 14.7744 9.18555 14.4258 9.18555H1.56738C1.21875 9.18555 0.952148 9.45898 0.952148 9.80078C0.952148 10.1426 1.22559 10.4229 1.56738 10.4229ZM1.56738 14.0049H8.75879C9.10059 14.0049 9.38086 13.7246 9.38086 13.3828C9.38086 13.041 9.10742 12.7676 8.75879 12.7676H1.56738C1.21875 12.7676 0.952148 13.041 0.952148 13.3828C0.952148 13.7246 1.22559 14.0049 1.56738 14.0049Z"></path></svg></span>Members</th><td>Tamas Orban, Hududui Stefan, Neciu Stefan</td></tr></tbody></table></header><div class="page-body"><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="13be3258-a33e-8077-beae-c29d09c9e014"><div style="font-size:1.5em"><span class="icon">🚫</span></div><div style="width:100%"><p id="80a64409-4abc-442c-a036-9d095392729d" class=""><strong>Document structure:</strong></p><p id="13be3258-a33e-801a-a633-daeebe6bee70" class="">We made our solutions into <strong>little code parts</strong> so we can explain our methodology.</p><p id="13be3258-a33e-8058-91e6-f79f9969be95" class=""><strong>However the full executed code is provided at the bottom of the documentation.</strong></p></div></figure><h2 id="136e3258-a33e-8029-89cf-c4f25842d17b" class="">Exercise 1</h2><figure id="136e3258-a33e-80c1-8667-c76a67c60471" class="image"><a href="Lab_2%2012ee3258a33e81f0a5fcca6e06d26e80/Screenshot_2024-11-06_at_13.52.43.png"><img style="width:707.9688110351562px" src="Lab_2%2012ee3258a33e81f0a5fcca6e06d26e80/Screenshot_2024-11-06_at_13.52.43.png"/></a></figure><hr id="136e3258-a33e-807e-b44d-d672a41c7c37"/><blockquote id="136e3258-a33e-8042-8a54-e2421737644d" class=""><strong>Code</strong><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="13be3258-a33e-8090-9a23-c5ab233508eb"><div style="font-size:1.5em"><span class="icon">🚫</span></div><div style="width:100%"><p id="4db7329c-9d9e-48f1-b59c-ab01b7269c0d" class=""><strong>Control algorithm: </strong><code><strong>open-loop</strong></code></p></div></figure><hr id="136e3258-a33e-80d9-a91c-ea95e9a966be"/><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="136e3258-a33e-8081-a513-e770ec56a8a2" class="code"><code class="language-C++">
+void setup() {
+  pinMode(20, OUTPUT);
+  pinMode(19, OUTPUT);
+}
+
+void loop() {
+
+  int light = analogRead(A4);
+
+  if (light &lt; 500) {
+
+    digitalWrite(20, HIGH);
+    digitalWrite(19, HIGH);
+  } else {
+  
+    digitalWrite(20, LOW);
+    digitalWrite(19, LOW);
+  }
+
+  delay(100);
+}
+</code></pre><hr id="136e3258-a33e-8083-b1bc-c6cc3917a1e8"/><p id="136e3258-a33e-80da-8ec0-e9c3438217db" class=""><code>delay(100);</code> →  <strong>stabilize readings</strong></p><ul id="136e3258-a33e-807e-bce0-d7ab17483176" class="bulleted-list"><li style="list-style-type:disc"><strong>It pauses </strong><code><strong>loop()</strong></code><strong> for 0.1 secound</strong></li></ul><hr id="13be3258-a33e-809b-9b89-dfa2fff084a2"/><p id="13be3258-a33e-805f-8b7b-db4dc066caa6" class=""><code>analogRead(A4)</code> - <strong>Opto sensor</strong></p><ul id="13be3258-a33e-8005-ba7d-d63f2ae43175" class="bulleted-list"><li style="list-style-type:disc">Wired into <strong>A4</strong></li></ul><ul id="13be3258-a33e-8035-883b-e42fc7e1c0a8" class="bulleted-list"><li style="list-style-type:disc"><strong>Mesures</strong> light intensity and <strong>returns</strong> it as an integer value</li></ul><ul id="13be3258-a33e-8012-9529-febf4a52794a" class="bulleted-list"><li style="list-style-type:disc">analogRead function → returns <code>int</code> between<ul id="13be3258-a33e-80a5-bd0b-dc4227416acd" class="bulleted-list"><li style="list-style-type:circle"> <strong>0 ( No light ) - 1023 ( Max light )</strong></li></ul></li></ul><ul id="13be3258-a33e-8033-aaec-e31852997d60" class="bulleted-list"><li style="list-style-type:disc">analogRead function → expects : <strong>analog pin </strong><code><strong>PIN NUMBER</strong></code><figure id="13de3258-a33e-805a-977b-d9ae5b84372b" class="image"><a href="Lab_2%2012ee3258a33e81f0a5fcca6e06d26e80/IMG_4990.jpg"><img style="width:240px" src="Lab_2%2012ee3258a33e81f0a5fcca6e06d26e80/IMG_4990.jpg"/></a></figure><figure id="13de3258-a33e-809f-8fc3-ef0f591be30e" class="image"><a href="Lab_2%2012ee3258a33e81f0a5fcca6e06d26e80/IMG_4989.jpg"><img style="width:240px" src="Lab_2%2012ee3258a33e81f0a5fcca6e06d26e80/IMG_4989.jpg"/></a></figure></li></ul><hr id="13be3258-a33e-803a-9fc3-d2d793f207c1"/><p id="13be3258-a33e-8080-9667-eb2fc0b22f65" class=""><code>digitalWrite(20, HIGH)</code> - <strong>LED control</strong></p><ul id="13be3258-a33e-807a-b924-d454399c562f" class="bulleted-list"><li style="list-style-type:disc">This function → Set LED with provided <code>PIN</code> <ul id="13be3258-a33e-809f-8086-c7da9fb40d5d" class="bulleted-list"><li style="list-style-type:circle">HIGH : <strong>high voltage ( </strong><style>@import url('https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.css')</style><span data-token-index="0" contenteditable="false" class="notion-text-equation-token" style="user-select:all;-webkit-user-select:all;-moz-user-select:all"><span></span><span><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>5</mn><mi>V</mi><mo>−</mo><mn>3.3</mn><mi>V</mi></mrow><annotation encoding="application/x-tex">5V - 3.3V </annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.7667em;vertical-align:-0.0833em;"></span><span class="mord">5</span><span class="mord mathnormal" style="margin-right:0.22222em;">V</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord">3.3</span><span class="mord mathnormal" style="margin-right:0.22222em;">V</span></span></span></span></span><span>﻿</span></span><strong> )</strong></li></ul><ul id="13be3258-a33e-80ab-a6e2-fc9a68ba8c96" class="bulleted-list"><li style="list-style-type:circle">LOW : <strong>low voltage ( </strong><style>@import url('https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.css')</style><span data-token-index="0" contenteditable="false" class="notion-text-equation-token" style="user-select:all;-webkit-user-select:all;-moz-user-select:all"><span></span><span><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>0</mn><mi>V</mi></mrow><annotation encoding="application/x-tex">0V</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord">0</span><span class="mord mathnormal" style="margin-right:0.22222em;">V</span></span></span></span></span><span>﻿</span></span><strong> )</strong></li></ul></li></ul><ul id="13be3258-a33e-8037-9539-c7062499b645" class="bulleted-list"><li style="list-style-type:disc">This function → expects : <ul id="13be3258-a33e-8052-9f9d-ca8a07c30272" class="bulleted-list"><li style="list-style-type:circle">Pin number : LED wired into the circuit</li></ul><ul id="13be3258-a33e-80aa-8498-ebc7c96dacdf" class="bulleted-list"><li style="list-style-type:circle">Level : HIGH or LOW</li></ul></li></ul><hr id="13be3258-a33e-807d-90e5-e54d95f054f5"/><p id="13be3258-a33e-80df-b137-c5662001cd91" class=""><code><strong>setup function</strong></code></p><ul id="13be3258-a33e-800e-9b67-deb09ef60f56" class="bulleted-list"><li style="list-style-type:disc"><strong>pinMode</strong> → Configuration of the LED pin :<ul id="13be3258-a33e-8046-946e-d1f0239d4570" class="bulleted-list"><li style="list-style-type:circle"><strong>INPUT</strong> : read external signals or sensor data</li></ul><ul id="13be3258-a33e-80f8-89df-df9ec12345ee" class="bulleted-list"><li style="list-style-type:circle"><strong>OUTPUT : </strong>allows control with HIGH and LOW options for voltage control</li></ul></li></ul><ul id="13be3258-a33e-8010-8464-e93e5d624b0e" class="bulleted-list"><li style="list-style-type:disc"><strong>pinMode</strong> → expects :<ul id="13be3258-a33e-80dd-9359-ec18caae83c2" class="bulleted-list"><li style="list-style-type:circle"><strong>Pin number</strong> : LED wired into the circuit<figure id="13de3258-a33e-804f-bde8-e80b329db5dc" class="image"><a href="Lab_2%2012ee3258a33e81f0a5fcca6e06d26e80/IMG_4991.jpg"><img style="width:336px" src="Lab_2%2012ee3258a33e81f0a5fcca6e06d26e80/IMG_4991.jpg"/></a></figure></li></ul></li></ul><hr id="13be3258-a33e-80ac-857b-cc5c109e0a24"/><p id="13be3258-a33e-8034-9e8c-cfeca73e2c37" class=""><code><strong>loop function</strong></code></p><ul id="13be3258-a33e-8008-a3f3-f1938322d886" class="bulleted-list"><li style="list-style-type:disc"><strong>It will loop infinetly with a 0.1 sec delay between each loop</strong></li></ul><ul id="13be3258-a33e-80d3-aca2-e1c42a400d84" class="bulleted-list"><li style="list-style-type:disc">This will solve our task because it will keep providing our LED with a proper voltage based on the current opto sensor response</li></ul><hr id="13de3258-a33e-800f-b851-c5fb4c9f6603"/><figure id="13de3258-a33e-800a-abc1-e885fc5a2e72" class="image"><a href="Lab_2%2012ee3258a33e81f0a5fcca6e06d26e80/IMG_4987.jpg"><img style="width:240px" src="Lab_2%2012ee3258a33e81f0a5fcca6e06d26e80/IMG_4987.jpg"/></a></figure><figure id="13de3258-a33e-8004-98b9-d998bcd7dbb1" class="image"><a href="Lab_2%2012ee3258a33e81f0a5fcca6e06d26e80/IMG_4988.jpg"><img style="width:240px" src="Lab_2%2012ee3258a33e81f0a5fcca6e06d26e80/IMG_4988.jpg"/></a></figure></blockquote><hr id="138e3258-a33e-8090-876b-f8f3adf1fedf"/><h2 id="138e3258-a33e-80f5-8fc1-fe73ad6e60d4" class="">Exercise 2</h2><figure id="13be3258-a33e-80c2-9497-c46a1cc82f2d" class="image"><a href="Lab_2%2012ee3258a33e81f0a5fcca6e06d26e80/Screenshot_2024-11-11_at_12.39.23.png"><img style="width:671.99658203125px" src="Lab_2%2012ee3258a33e81f0a5fcca6e06d26e80/Screenshot_2024-11-11_at_12.39.23.png"/></a></figure><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="13be3258-a33e-800a-bee0-f9fc1109c33d"><div style="font-size:1.5em"><span class="icon">🚫</span></div><div style="width:100%"><p id="13de3258-a33e-80c0-92b9-d4dc760f60e5" class=""><strong>The full working code which we used in lab is at the bottom of the document</strong></p><hr id="13de3258-a33e-807d-9aa2-e55bc247dab9"/><p id="a2671244-9ce1-4709-bba8-135b8a612d29" class="">For this exercise, we divided the problem into two steps and then combined them into one :</p><ul id="13be3258-a33e-8040-ad4c-fbd42b8874fa" class="bulleted-list"><li style="list-style-type:disc">Move Forward</li></ul><ul id="13be3258-a33e-80dc-aae5-f7382e7fadf7" class="bulleted-list"><li style="list-style-type:disc">Distance Response with ultrasound sensor</li></ul><ul id="13be3258-a33e-80c5-a87b-f0c79b44dbba" class="bulleted-list"><li style="list-style-type:disc">Conditional statment control for the <code>loop()</code> function to stop when distance is <code>&gt; 1</code></li></ul></div></figure><blockquote id="138e3258-a33e-805f-9acb-cd8a2ba5da99" class=""><strong>1) - Move Forward</strong><hr id="13be3258-a33e-807d-ba36-fe2d1e8ef75f"/><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="13be3258-a33e-808b-b0cb-ffdbf0344b2d" class="code"><code class="language-C++">#define M1_FORWARD 0xC1
+#define M1_BACKWARD 0xC2
+#define M2_FORWARD 0xC5
+#define M2_BACKWARD 0xC6
+
+float m1Speed;
+float m2Speed;
+
+void setup() {
+		
+		// [ NOT INCLUDING SERIAL, CALIBRATION, POLOLU STEPS HERE ]
+    
+		// Initial speed
+    m1Speed = 0.2;  
+    m2Speed = 0.2;
+}
+
+// PROVIDED FUNCTION
+void activateMotor(int motor, float speed) {
+    char opcode = 0x00;
+    if (speed &gt; 0.0) {
+        opcode = (motor == 0) ? M1_FORWARD : M2_FORWARD;
+    } else {
+        opcode = (motor == 0) ? M1_BACKWARD : M2_BACKWARD;
+    }
+
+    unsigned char arg = 0x7f * abs(speed);
+    Serial1.write(opcode);
+    Serial1.write(arg);
+    Serial1.flush();
+}
+
+
+void loop() {
+    activateMotor(0,m1Speed);
+    activateMotor(1,m2Speed);
+    delay(500);
+}</code></pre><hr id="13be3258-a33e-802c-920a-ce01aa66260d"/><p id="13be3258-a33e-80e7-8570-eb1fbc90bb81" class=""><code>activateMotor() function</code></p><ul id="13be3258-a33e-80a0-a222-d86c2b82afd9" class="bulleted-list"><li style="list-style-type:disc">activateMotor → Activate the provided <strong>actuator</strong> ( motor ) with the provided <strong>speed</strong></li></ul><ul id="13be3258-a33e-80d4-9ceb-ce99e8f64501" class="bulleted-list"><li style="list-style-type:disc">The function logic : <ul id="13be3258-a33e-806b-986b-fc475d5c0fb0" class="bulleted-list"><li style="list-style-type:circle">If speed is positive → <strong>move forward</strong></li></ul><ul id="13be3258-a33e-80d1-919a-f918f2a8a51c" class="bulleted-list"><li style="list-style-type:circle">If speed is negative → <strong>move backwards</strong></li></ul></li></ul><ul id="13be3258-a33e-80bd-bc61-ec4301ed0188" class="bulleted-list"><li style="list-style-type:disc">activateMotor → expects : <ul id="13be3258-a33e-802b-ba70-c2d6ffd78b12" class="bulleted-list"><li style="list-style-type:circle">motor → it can be <code>0</code> for <strong>M1_FORWARD</strong> or <code>any int</code> (that is not 0) for <strong>M2_FORWARD</strong></li></ul><ul id="13be3258-a33e-80d9-9bc6-e1e902280ed4" class="bulleted-list"><li style="list-style-type:circle">speed → speed between <code>1.0 ↔ -1.0</code></li></ul></li></ul><hr id="13be3258-a33e-808e-abc0-f83ba7b3c945"/><p id="13be3258-a33e-808a-9730-c19059a119c0" class=""><code><strong>setup function</strong></code> </p><ul id="13be3258-a33e-8054-890b-ced78288a1b9" class="bulleted-list"><li style="list-style-type:disc">This function runs once and first → so we set the initial speed 0.2, but this way we can control it’s speed within the loop() which we want later on to stop within distance</li></ul><hr id="13be3258-a33e-8025-ac82-e51495158b49"/><p id="13be3258-a33e-80b2-ad21-f84bc6b31245" class=""><code><strong>loop function</strong></code></p><ul id="13be3258-a33e-8050-ab4b-ed8124e8f29d" class="bulleted-list"><li style="list-style-type:disc">This function just keep the two motors going with the speed of the <code>global variables</code></li></ul><hr id="13be3258-a33e-809d-a09f-f2e5fa6a3847"/><blockquote id="13be3258-a33e-809b-ad67-de2b539e9616" class=""><strong>2) - Mesure Distance </strong></blockquote><hr id="13be3258-a33e-8055-b734-c1bd8f3f944f"/><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="13be3258-a33e-80d3-bd6d-e06fd5e1dcd9" class="code"><code class="language-C++">#include &lt;Ultrasonic.h&gt;
+
+void loop() {
+    Ultrasonic ultrasonic(10);
+    int distance = ultrasonic.read(); 
+    delay(500); 
+}</code></pre><hr id="13be3258-a33e-8041-ba22-e9c8014a5172"/><p id="13be3258-a33e-8055-9101-dfc01908a77d" class=""><code><strong>Ultrasonic ultrasonic()</strong></code><code> function</code></p><ul id="13be3258-a33e-809e-8105-d77fa73dec3c" class="bulleted-list"><li style="list-style-type:disc">ultrasonic()<strong> → Initialize ultrasonic sensor</strong></li></ul><ul id="13be3258-a33e-8074-a93a-cd8ab5cc38ba" class="bulleted-list"><li style="list-style-type:disc">ultrasonic() → expects:<ul id="13be3258-a33e-8067-8e90-e28adaf6c967" class="bulleted-list"><li style="list-style-type:circle">pin number:<strong> Ultrasonic senosr pin location → </strong></li></ul><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="13be3258-a33e-8062-bb41-c516dc792efb"><div style="font-size:1.5em"><span class="icon">🚫</span></div><div style="width:100%"><p id="db671977-703d-420a-9754-b7f01f4fd995" class=""><em><strong>For use its pin 10</strong></em></p></div></figure></li></ul><hr id="13be3258-a33e-80c7-a320-d7733460ffcf"/><p id="13be3258-a33e-8041-a1aa-f9ce3f7ad98b" class=""><code>ultrasonic.read()</code></p><ul id="13be3258-a33e-807a-baaf-ccd554404d75" class="bulleted-list"><li style="list-style-type:disc">ultrasonic.read() → reads distance in centimeters</li></ul><ul id="13be3258-a33e-807a-b86d-f9437f96666e" class="bulleted-list"><li style="list-style-type:disc">ultrasonic.read() → <strong>returns :</strong><ul id="13be3258-a33e-8044-9ddf-cf4ee65251db" class="bulleted-list"><li style="list-style-type:circle"><code>int</code> value which represents the distance in <strong>centimeters</strong> </li></ul></li></ul><hr id="13be3258-a33e-8030-b805-c6be65b899ea"/><blockquote id="13be3258-a33e-8090-8890-df87dffa258b" class=""><strong>3) - Combined Code</strong><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="13be3258-a33e-80d4-8301-e00ea5ddba53"><div style="font-size:1.5em"><span class="icon">🚫</span></div><div style="width:100%"><p id="5109badb-3b03-4f21-b18d-fa26af0de9fd" class=""><strong>Control algorithm: </strong><code><strong>feedback closed loop</strong></code></p></div></figure></blockquote><hr id="138e3258-a33e-8094-8c24-f41c67100275"/><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="138e3258-a33e-80e0-a52b-c727dccff3bd" class="code"><code class="language-C++">#include &lt;Ultrasonic.h&gt;
+
+float m1Speed;
+float m2Speed;
+
+
+void setup() {
+	  Serial1.begin(POLOLU_SERIAL_BAUDRATE);
+    Serial1.setTimeout(POLOLU_SERIAL_DEFAULT_TIMEOUT);
+    Serial.begin(CONSOLE_SERIAL_BAUDRATE);
+    delay(CONSOLE_INITIAL_DELAY);
+
+    // Wait until Pololu 3pi is on and responds with the correct signature
+    while (pololuSignature(signature) &lt; 0) {
+        Serial.println(&quot;Timeout while requesting device signature. Please check if Pololu 3pi is on.&quot;);
+        delay(2000);
+    }
+    
+    m1Speed = 0.2;  
+    m2Speed = 0.2;
+}
+
+
+void stopSmooth() {
+    while (m1Speed &gt; 0 || m2Speed &gt; 0) {
+        if ((m1Speed - 0.05) &gt;= 0) {
+            m1Speed -= 0.05;
+        } else {
+            m1Speed = 0;    
+        }
+        if ((m2Speed - 0.05) &gt;= 0) {
+            m2Speed -= 0.05;        
+        } else {
+            m2Speed = 0;
+        }
+
+        activateMotor(0, m1Speed);
+        activateMotor(1, m2Speed);
+        delay(35);
+    }  
+}
+
+
+
+void loop() {
+		Ultrasonic ultrasonic(10);	
+		
+    int distance = ultrasonic.read();
+
+    if (distance &gt; 0 &amp;&amp; distance &lt;= 5) {
+        stopSmooth();
+    }
+    
+    activateMotor(0,m1Speed);
+    activateMotor(1,m2Speed);
+
+    delay(100);
+}</code></pre><hr id="13be3258-a33e-8090-ab0f-ed878b8be36f"/><p id="13be3258-a33e-8038-972c-d1f600b43fc7" class=""><code><strong>loop function</strong></code></p><ul id="13be3258-a33e-8025-af6a-e973a617a222" class="bulleted-list"><li style="list-style-type:disc">This function is an <strong>feedback loop system</strong></li></ul><ol type="1" id="13be3258-a33e-8023-b748-f1a7e2579e99" class="numbered-list" start="1"><li>Mesure distance in centimeters</li></ol><ol type="1" id="13be3258-a33e-8094-9ca7-e95b7f11b86b" class="numbered-list" start="2"><li>if distance is lower then <code>5 cm</code> than activate given helper function <strong>stopSmooth()</strong><ol type="a" id="13be3258-a33e-804d-9958-c872340ed470" class="numbered-list" start="1"><li><strong>stopSmooth</strong> → This function will slowly adjust the speed of the actuators within a while loop untill they reach <code>0</code></li></ol><ol type="a" id="13be3258-a33e-806c-8c68-c0e2df8dc803" class="numbered-list" start="2"><li><strong>while (true)</strong>  → ensures that the loop stops and the activateMotor function does not run anymore</li></ol></li></ol><ol type="1" id="13be3258-a33e-80a5-9a26-e79b10c4a153" class="numbered-list" start="3"><li>else keep the wheels moving</li></ol><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="13be3258-a33e-80b0-9af3-d412da33c1ac"><div style="font-size:1.5em"><span class="icon">🚫</span></div><div style="width:100%"><p id="20440e6b-d1f9-47c4-807a-930599e18306" class="">The feedback loop system is controlling the global variables for logic execution : <div class="indented"><ul id="13be3258-a33e-8096-9fdd-d78ce947b45b" class="bulleted-list"><li style="list-style-type:disc">m1Speed</li></ul><ul id="13be3258-a33e-8011-970d-e1df61e0cdcb" class="bulleted-list"><li style="list-style-type:disc">m2Speed</li></ul></div></p></div></figure><hr id="13be3258-a33e-8013-a76b-cd87aa0fd314"/><p id="13be3258-a33e-8006-a03b-ea2857b6ba24" class=""><code><strong>setup function</strong></code></p><ul id="13be3258-a33e-8031-b38f-f6bf6fcbe937" class="bulleted-list"><li style="list-style-type:disc">The only thing we changed in this function is we added the <strong>pololuSignature setup and Serial setups</strong></li></ul><hr id="13be3258-a33e-8038-9d0c-e5b2fb9f67c1"/><figure id="13de3258-a33e-80eb-b36a-fc608d01c59e" class="image"><a href="Lab_2%2012ee3258a33e81f0a5fcca6e06d26e80/IMG_4992.jpg"><img style="width:336px" src="Lab_2%2012ee3258a33e81f0a5fcca6e06d26e80/IMG_4992.jpg"/></a></figure><figure id="13de3258-a33e-8001-9b89-f041bff77cfa" class="image"><a href="Lab_2%2012ee3258a33e81f0a5fcca6e06d26e80/IMG_4994.jpg"><img style="width:336px" src="Lab_2%2012ee3258a33e81f0a5fcca6e06d26e80/IMG_4994.jpg"/></a></figure></blockquote><hr id="138e3258-a33e-80a9-8249-ee5e3dc452ef"/><h2 id="138e3258-a33e-8052-b7cb-c33208e9760a" class="">Exercise 3</h2><figure id="13be3258-a33e-8032-ae91-d2680ef8d760" class="image"><a href="Lab_2%2012ee3258a33e81f0a5fcca6e06d26e80/Screenshot_2024-11-11_at_12.39.45.png"><img style="width:707.93408203125px" src="Lab_2%2012ee3258a33e81f0a5fcca6e06d26e80/Screenshot_2024-11-11_at_12.39.45.png"/></a></figure><hr id="138e3258-a33e-809a-b0c5-c28fea4f9210"/><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="13be3258-a33e-80f6-9ed4-f7a112e1cdc0"><div style="font-size:1.5em"><span class="icon">🚫</span></div><div style="width:100%"><p id="13de3258-a33e-8042-b99b-f55be0a5201b" class=""><strong>The full working code which we used in lab is at the bottom of the document</strong></p><hr id="13de3258-a33e-804d-b14c-d0dab0cbe65f"/><p id="009622be-d74b-474b-9d3e-9fd300b99e7c" class="">For this exercise, we divided the problem into two steps and then combined them into one : </p><ol type="1" id="13be3258-a33e-80eb-90a4-d50d5f4eb560" class="numbered-list" start="1"><li>Setup and calibration</li></ol><ol type="1" id="13be3258-a33e-806a-a8d5-ed05b9956288" class="numbered-list" start="2"><li>Open-Loop system logic - loop funciton</li></ol></div></figure><blockquote id="138e3258-a33e-8022-a2ed-c4bbc7e1d5ab" class=""><strong>Setup and calibration</strong><hr id="13be3258-a33e-803b-b5b8-e98fa6c1e416"/><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="13be3258-a33e-8047-a144-db44e06e0819" class="code"><code class="language-C++">unsigned int sensorValues[5];
+float m1Speed;
+float m2Speed;
+
+char sensorAutoCalibrate() {
+
+  serialClearReadBuffer();
+  Serial1.write(AUTO_CALIBRATE);
+  Serial1.flush();
+  if (serialWaitForAvailableBytes(LINE_SENSORS_CALIBRATION_BYTECOUNT, LINE_SENSORS_CALIBRATION_TIMEOUT) &lt; 0) {
+    return 0;  
+  }
+
+  return Serial1.read();
+
+}
+
+int calibratedSensors(unsigned int sensors[N_LINE_SENSORS]) {
+  
+  unsigned int sensor1 = 0;
+  unsigned int sensor2 = 0;
+  unsigned int sensor3 = 0;
+  unsigned int sensor4 = 0;
+  unsigned int sensor5 = 0;
+  
+  serialClearReadBuffer();
+  Serial1.write(SEND_CALIBRATED_SENSOR_VALUES);
+  Serial1.flush();
+  if (serialWaitForAvailableBytes(LINE_SENSORS_READ_BYTECOUNT, LINE_SENSORS_READ_TIMEOUT) &lt; 0) {
+    return -1;   
+  }
+
+  char sensor1Low = Serial1.read();
+  char sensor1High = Serial1.read();
+  sensor1 = sensor1Low + (sensor1High &lt;&lt; 8);
+  char sensor2Low = Serial1.read();
+  char sensor2High = Serial1.read();
+  sensor2 = sensor2Low + (sensor2High &lt;&lt; 8);
+  char sensor3Low = Serial1.read();
+  char sensor3High = Serial1.read();
+  sensor3 = sensor3Low + (sensor3High &lt;&lt; 8);
+  char sensor4Low = Serial1.read();
+  char sensor4High = Serial1.read();
+  sensor4 = sensor4Low + (sensor4High &lt;&lt; 8);   
+  char sensor5Low = Serial1.read();
+  char sensor5High = Serial1.read();
+  sensor5 = sensor5Low + (sensor5High &lt;&lt; 8);   
+
+  sensors[0] = sensor1;
+  sensors[1] = sensor2;
+  sensors[2] = sensor3;
+  sensors[3] = sensor4;
+  sensors[4] = sensor5;
+
+  return 0;
+
+}
+
+void setup() {
+
+  Serial1.begin(POLOLU_SERIAL_BAUDRATE);
+  Serial1.setTimeout(POLOLU_SERIAL_DEFAULT_TIMEOUT);
+  Serial.begin(CONSOLE_SERIAL_BAUDRATE);
+  delay(CONSOLE_INITIAL_DELAY);
+
+  // Wait until 3pi is on and responds with correct signature
+  while (pololuSignature(signature) &lt; 0) {
+    Serial.println(&quot;Timeout while requesting device signature. Please check if Pololu 3pi is on.&quot;);
+    delay(POLOLU_OFF_LOOP_DELAY);
+  }
+
+  // Initial calibration
+  for (int i = 0; i &lt; 10; i++) {
+    calibratedSensors(sensorValues);
+  }
+  sensorAutoCalibrate();
+
+  m1Speed = 0.15;
+  m2Speed = 0.15;
+  loopCount = 1;
+
+}</code></pre><hr id="13be3258-a33e-8026-a37a-cf69ab211ba6"/><p id="13be3258-a33e-8052-af8c-cd6b00f14f38" class=""><code><strong>Calibration functions</strong></code></p><ul id="13be3258-a33e-80f1-b20d-c90dda230da1" class="bulleted-list"><li style="list-style-type:disc">It will initalize the sensors and calibrate them.</li></ul><hr id="13be3258-a33e-80a3-87f3-debf122edff1"/><p id="13be3258-a33e-80be-95b7-c16d4af1b51c" class=""><code><strong>Setup function</strong></code></p><ul id="13be3258-a33e-802f-8022-c35423625f27" class="bulleted-list"><li style="list-style-type:disc">We start with a <code>speed of 0.15</code></li></ul><hr id="13be3258-a33e-8067-a191-f37189ca6134"/><hr id="13be3258-a33e-8057-8db4-de3e1dfb599d"/><blockquote id="13be3258-a33e-8095-8c22-f3c2b6d88a1e" class=""><strong>2.) - Open-Loop system logic</strong></blockquote><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="13be3258-a33e-806f-90b0-f26805b2ed46" class="code"><code class="language-C++">#include &lt;Arduino.h&gt;
+
+void loop() {
+
+    calibratedSensors(sensorValues);
+    
+    // Line-following 
+    if (sensorValues[0] &gt; 500 &amp;&amp; sensorValues[4] &lt; 500) {
+    		 // Turn Left
+        activateMotor(0, 0);
+        activateMotor(1, 0.45);
+    } else if (sensorValues[4] &gt; 500 &amp;&amp; sensorValues[0] &lt; 500) {
+		     // Turn Right
+        activateMotor(0, 0.45);
+        activateMotor(1, 0.25);
+    } else if (sensorValues[0] &gt; 700 &amp;&amp; sensorValues[4] &gt; 700) {
+    		// T-Junction
+		    activateMotor(0, 0);
+		    activateMotor(1, 0);
+        Serial.println(&quot;T-junction detected! Stopping.&quot;);
+        while (true); 
+    } else {
+		    //FORWARD
+        activateMotor(0, 0.15);
+        activateMotor(1, 0.15);
+    }
+
+    delay(50);
+}</code></pre><hr id="13be3258-a33e-8097-9e3d-c9458d908bad"/><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="13be3258-a33e-8094-bda4-efec8ebc8ed3"><div style="font-size:1.5em"><span class="icon">🚫</span></div><div style="width:100%"><p id="e1d1b50f-2d78-4d11-9212-15fee6c89bee" class=""><strong>Information for thresholds</strong></p><ul id="13be3258-a33e-8084-b432-e4d5c6868eef" class="bulleted-list"><li style="list-style-type:disc">Above 500 light intensity = Normal reading of the line </li></ul><ul id="13be3258-a33e-801f-b213-db89ccd4e527" class="bulleted-list"><li style="list-style-type:disc">Below 500 light intensity = Low reading of the line → we should turn to the side of the opto-sensor</li></ul><ul id="13be3258-a33e-80a6-b989-cfd1e530b665" class="bulleted-list"><li style="list-style-type:disc">Above 700 light intensity for BOTH opto-sensors = High reading of the line → T-junction → we should STOP</li></ul><hr id="13be3258-a33e-80b8-bc93-c7a43188a2d9"/><p id="13be3258-a33e-8030-9b52-cafc8f0957e5" class="">Left sensor → sensorValues[0]</p><p id="13be3258-a33e-8034-9242-d70c197495a5" class="">Right sensor → sensorValues[4]</p></div></figure><ol type="1" id="13be3258-a33e-8049-a95c-c3fbc4262722" class="numbered-list" start="1"><li><strong>calibrateSensors : </strong>in each loop we want to make sure that the sensor values are read correctly</li></ol><ol type="1" id="13be3258-a33e-80b1-8137-f5b435c563e5" class="numbered-list" start="2"><li><strong>Left steering</strong><ol type="a" id="13be3258-a33e-805e-9ea7-db5bd3a6a769" class="numbered-list" start="1"><li>if <code>left sensor</code> is above <strong>500 light intesity AND </strong><code><strong>right</strong></code><code> sensor</code> is below <strong>500 l.i.</strong><ol type="i" id="13be3258-a33e-8062-b64a-ed402302da99" class="numbered-list" start="1"><li>We want to steer to the <strong>left</strong> → we can do that bu slowing down the <code>left motor (actuator)</code></li></ol></li></ol></li></ol><ol type="1" id="13be3258-a33e-8097-8d31-d583bc17124d" class="numbered-list" start="3"><li><strong>Right steering</strong><ol type="a" id="13be3258-a33e-80a4-9d60-fe1bda28900e" class="numbered-list" start="1"><li>if <code>left sensor</code> is below <strong>500 light intesity AND </strong><code><strong>right</strong></code><code> sensor</code>is above <strong>500 l.i.</strong><ol type="i" id="d9a9694b-6d2a-4c30-93bf-1e768ddb2bf6" class="numbered-list" start="1"><li>We want to steer to the <strong>right</strong> → we can do that bu slowing down the <code>right motor (actuator)</code></li></ol></li></ol></li></ol><ol type="1" id="13be3258-a33e-806e-a559-fc2fd7a5b9bf" class="numbered-list" start="4"><li><strong>T-Junction</strong><ol type="a" id="13be3258-a33e-8089-92ac-dac09e87977c" class="numbered-list" start="1"><li>if <code>left sensor</code> is above <strong>700 light intesity AND </strong><code><strong>right</strong></code><code> sensor</code> is above <strong>700 l.i.</strong><ol type="i" id="a010309c-79f8-4d87-9071-2d4b64b08c19" class="numbered-list" start="1"><li>We want to stop both <code>motors (actuators)</code></li></ol><ol type="i" id="13be3258-a33e-800d-9a8b-cc9574c6fc7e" class="numbered-list" start="2"><li>Initalise an infinite loop within <code>loop()</code> so the motor speed stay at 0 untill we stop the program </li></ol></li></ol></li></ol><ol type="1" id="13be3258-a33e-80a4-9f9f-c28e9934e5d3" class="numbered-list" start="5"><li><strong>Moving Forward</strong><ol type="a" id="13be3258-a33e-809a-a787-fc9e38ca261f" class="numbered-list" start="1"><li>if  (<code>left sensor</code> AND <code>right sensor</code> is above <strong>500  ) OR (</strong><code>left sensor</code> AND <code>right sensor</code> is below <strong>500 )</strong></li></ol><ol type="a" id="13be3258-a33e-8031-ab86-f7187f2a6c24" class="numbered-list" start="2"><li>AND <strong>do not reach the T-junction threshold of 700</strong><ol type="i" id="7fa01a7a-16eb-4dab-9b26-06fa75173563" class="numbered-list" start="1"><li>We want to move with the same speed for both <code>motors (actuators)</code></li></ol></li></ol></li></ol><hr id="13be3258-a33e-8058-a76b-e46d222d225a"/><p id="13be3258-a33e-8087-9c93-fc1521570ed9" class=""><strong>Combined Code</strong></p><hr id="138e3258-a33e-8072-8a86-da1b9b44124d"/><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="138e3258-a33e-8014-a89a-cfb8349263f7" class="code"><code class="language-C++">#include &lt;Arduino.h&gt;
+
+unsigned int sensorValues[5];
+float m1Speed;
+float m2Speed;
+
+char sensorAutoCalibrate() {
+
+  serialClearReadBuffer();
+  Serial1.write(AUTO_CALIBRATE);
+  Serial1.flush();
+  if (serialWaitForAvailableBytes(LINE_SENSORS_CALIBRATION_BYTECOUNT, LINE_SENSORS_CALIBRATION_TIMEOUT) &lt; 0) {
+    return 0;
+  }
+
+  return Serial1.read();
+
+}
+
+int calibratedSensors(unsigned int sensors[N_LINE_SENSORS]) {
+  
+  unsigned int sensor1 = 0;
+  unsigned int sensor2 = 0;
+  unsigned int sensor3 = 0;
+  unsigned int sensor4 = 0;
+  unsigned int sensor5 = 0;
+  
+  serialClearReadBuffer();
+  Serial1.write(SEND_CALIBRATED_SENSOR_VALUES);
+  Serial1.flush();
+  if (serialWaitForAvailableBytes(LINE_SENSORS_READ_BYTECOUNT, LINE_SENSORS_READ_TIMEOUT) &lt; 0) {
+    return -1;  
+  }
+
+  char sensor1Low = Serial1.read();
+  char sensor1High = Serial1.read();
+  sensor1 = sensor1Low + (sensor1High &lt;&lt; 8);
+  char sensor2Low = Serial1.read();
+  char sensor2High = Serial1.read();
+  sensor2 = sensor2Low + (sensor2High &lt;&lt; 8);
+  char sensor3Low = Serial1.read();
+  char sensor3High = Serial1.read();
+  sensor3 = sensor3Low + (sensor3High &lt;&lt; 8);
+  char sensor4Low = Serial1.read();
+  char sensor4High = Serial1.read();
+  sensor4 = sensor4Low + (sensor4High &lt;&lt; 8);   
+  char sensor5Low = Serial1.read();
+  char sensor5High = Serial1.read();
+  sensor5 = sensor5Low + (sensor5High &lt;&lt; 8);   
+
+  sensors[0] = sensor1;
+  sensors[1] = sensor2;
+  sensors[2] = sensor3;
+  sensors[3] = sensor4;
+  sensors[4] = sensor5;
+
+  return 0;
+
+}
+
+void setup() {
+
+  Serial1.begin(POLOLU_SERIAL_BAUDRATE);
+  Serial1.setTimeout(POLOLU_SERIAL_DEFAULT_TIMEOUT);
+  Serial.begin(CONSOLE_SERIAL_BAUDRATE);
+  delay(CONSOLE_INITIAL_DELAY);
+
+  // Wait until 3pi is on and responds with correct signature
+  while (pololuSignature(signature) &lt; 0) {
+    Serial.println(&quot;Timeout while requesting device signature. Please check if Pololu 3pi is on.&quot;);
+    delay(POLOLU_OFF_LOOP_DELAY);
+  }
+
+  // Initial calibration
+  for (int i = 0; i &lt; 10; i++) {
+    calibratedSensors(sensorValues);
+  }
+  sensorAutoCalibrate();
+
+  m1Speed = 0.15;
+  m2Speed = 0.15;
+  loopCount = 1;
+
+}
+
+void loop() {
+
+    calibratedSensors(sensorValues);
+    
+    // Line-following logic
+    if (sensorValues[0] &gt; 500 &amp;&amp; sensorValues[4] &lt; 500) {
+    		 // Turn Left
+        activateMotor(0, 0);
+        activateMotor(1, 0.45);
+    } else if (sensorValues[4] &gt; 500 &amp;&amp; sensorValues[0] &lt; 500) {
+		      // Turn Right
+        activateMotor(0, 0.45);
+        activateMotor(1, 0);
+    } else if (sensorValues[0] &gt; 700 &amp;&amp; sensorValues[4] &gt; 700) {
+    		// T-Junction
+		    activateMotor(0, 0);
+		    activateMotor(1, 0);
+        while (true);
+    } else {
+		    //FORWARD
+        activateMotor(0, 0.15);
+        activateMotor(1, 0.15);
+    }
+
+    delay(50);
+}</code></pre></blockquote><hr id="138e3258-a33e-80fd-b07a-f42fbd06d68b"/><hr id="13be3258-a33e-80b3-bd7e-ed5ac0384052"/><h2 id="13be3258-a33e-8013-b013-fad93f52b67b" class="">BONUS Exercise 4</h2><figure id="13be3258-a33e-80e7-bb60-e2e03bca9839" class="image"><a href="Lab_2%2012ee3258a33e81f0a5fcca6e06d26e80/Screenshot_2024-11-11_at_14.47.44.png"><img style="width:707.9166870117188px" src="Lab_2%2012ee3258a33e81f0a5fcca6e06d26e80/Screenshot_2024-11-11_at_14.47.44.png"/></a></figure><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="13be3258-a33e-8093-8488-dcd39edeb7f7"><div style="font-size:1.5em"><span class="icon">🚫</span></div><div style="width:100%"><p id="4d006483-6567-40d7-958e-c6fc197de1b2" class=""><strong>We already mentioned the functionality of each segment of the code</strong></p><hr id="13be3258-a33e-8006-9cb1-cf31c1333156"/><p id="13be3258-a33e-80b1-812f-ec534744cabb" class="">So in this documentation we show the full code we came up with that tackles the task of Exercise 4</p></div></figure><blockquote id="13be3258-a33e-8023-85ac-e9b8a3e4ded1" class=""><strong>Combined Code</strong><ul id="13be3258-a33e-804b-b7ce-dac3c4995bd2" class="bulleted-list"><li style="list-style-type:disc">We added a <code>while(true);</code> to the first contition which solved out problem of stopping and then starting again</li></ul><hr id="13be3258-a33e-8084-87ba-dca65bad1bf2"/><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="13be3258-a33e-80d6-9f39-d22124fb236e" class="code"><code class="language-C++">
+#include &lt;Ultrasonic.h&gt;
+
+float m1Speed = 0;
+float m2Speed = 0;
+
+Ultrasonic ultrasonic(9, 10);
+
+
+void setup() {
+
+  Serial1.begin(POLOLU_SERIAL_BAUDRATE);
+  Serial1.setTimeout(POLOLU_SERIAL_DEFAULT_TIMEOUT);
+  Serial.begin(CONSOLE_SERIAL_BAUDRATE);
+  delay(CONSOLE_INITIAL_DELAY);
+
+  // Wait until 3pi is on and responds with correct signature
+  while (pololuSignature(signature) &lt; 0) {
+    Serial.println(&quot;Timeout while requesting device signature. Please check if Pololu 3pi is on.&quot;);
+    delay(POLOLU_OFF_LOOP_DELAY);
+  }
+
+  // Initial calibration
+  for (int i = 0; i &lt; 10; i++) {
+    calibratedSensors(sensorValues);
+  }
+  sensorAutoCalibrate();
+  
+	pinMode(20, OUTPUT);
+  pinMode(19, OUTPUT);
+  
+  m1Speed = 0.2;
+  m2Speed = 0.2;
+  loopCount = 1;
+
+}
+
+
+void stopSmooth() {
+    while (m1Speed &gt; 0 || m2Speed &gt; 0) {
+        if ((m1Speed - 0.05) &gt;= 0) {
+            m1Speed -= 0.05;
+        } else {
+            m1Speed = 0;    
+        }
+        if ((m2Speed - 0.05) &gt;= 0) {
+            m2Speed -= 0.05;        
+        } else {
+            m2Speed = 0;
+        }
+
+        activateMotor(0, m1Speed);
+        activateMotor(1, m2Speed);
+        delay(35);
+    }  
+}
+
+void loop() {
+
+    Ultrasonic ultrasonic(10);
+    
+    int distance = ultrasonic.read();
+    int light = analogRead(A4);
+    
+    
+		// DISTANCE
+    if (distance &gt; 0 &amp;&amp; distance &lt;= 5) {
+        stopSmooth();
+        while(true);
+    }
+    
+	
+		// LIGHT
+	  if (light &gt; 500) {
+	
+	    digitalWrite(20, HIGH);
+	    digitalWrite(19, HIGH);
+	  } else {
+	  
+	    digitalWrite(20, LOW);
+	    digitalWrite(19, LOW);
+	  }
+
+
+    calibratedSensors(sensorValues);
+    
+    // Line-following logic
+    if (sensorValues[0] &gt; 500 &amp;&amp; sensorValues[4] &lt; 500) {
+    		 // Turn Left
+        activateMotor(0, 0);
+        activateMotor(1, 0.45);
+    } else if (sensorValues[4] &gt; 500 &amp;&amp; sensorValues[0] &lt; 500) {
+		      // Turn Right
+        activateMotor(0, 0.45);
+        activateMotor(1, 0);
+    } else if (sensorValues[0] &gt; 700 &amp;&amp; sensorValues[4] &gt; 700) {
+    		// T-Junction
+		    activateMotor(0, 0);
+		    activateMotor(1, 0);
+        while (true);
+    } else {
+		    //FORWARD
+        activateMotor(0, 0.15);
+        activateMotor(1, 0.15);
+    }
+
+    delay(50);
+}
+</code></pre></blockquote><hr id="13be3258-a33e-8046-b8d4-ccaf72809af2"/><hr id="13be3258-a33e-80f2-a3b3-de0efb977932"/></div></article><span class="sans" style="font-size:14px;padding-top:2em"></span></body></html>
