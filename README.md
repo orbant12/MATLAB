@@ -2,7 +2,7 @@
 
 ---
 
-## Lab 1 - Signals | MATLAB
+# Lab 1 - Signals | MATLAB
 
 ### Tunning Fork
 
@@ -22,7 +22,7 @@
 
 ---
  
-## Lab 2 - Control Systems | Arduino IDE
+# Lab 2 - Control Systems | Arduino IDE
 
 ### Wiring
 
