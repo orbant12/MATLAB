@@ -2,7 +2,7 @@
 
 ---
 
-## Lab 1 - Signals
+## Lab 1 - Signals | MATLAB
 
  
  
